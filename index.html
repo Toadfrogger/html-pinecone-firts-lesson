@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+    <div id="enter">
+        Enter your name:
+        <input type="text" placeholder="Enter your name" id="entername" class="input is-normal">
+        <button class="button is-white" onclick="start()">Start</button>
+    </div>
+    <div id="healthbar" style="display:none">
+        <div id="name"> </div>
+        <div id="percentage"> 100</div>
+
+        <progress max="100" value="50" id="healthEl" class="progress is-warning"></progress>
+        <div style="display:flex; justify-content: space-around;">
+            <button style=" background-color: rgb(175, 44, 44);" onclick="attack()">Attack</button>
+            <button style="background-color:rgb(36, 195, 137)" onclick="heal()">Heal</button>
+        </div>
+    </div>
+
+    <script>
+        const entername = document.getElementById("entername");
+        const healthEl = document.getElementById("healthEl");
+        const myHealth = healthEl.value;
+        const percentage = document.getElementById("percentage");
+        function start() {
+            if (entername.value == "") {
+                entername.classList.remove("is-normal")
+                entername.classList.add("is-danger");
+                entername.classList.add("animate__animated");
+                entername.classList.add("animate__shakeX");
+            } else {
+                document.getElementById("enter").style.display = "none";
+                document.getElementById("healthbar").style.display = "block"
+                document.getElementById("name").textContent = entername.value;
+            }
+
+
+        }
+
+        function attack() {
+
+            const r=Math.random();
+            const attackforce = Math.floor(r*11);
+            
+            healthEl.value = healthEl.value - attackforce;
+            
+
+            updateHealthColor();
+            percentagetext();
+
+            if (healthEl.value <= 0) {
+                alert("Game over");
+                healthEl.value = 100;
+
+
+            }
+        }
+
+        function heal() {
+            healthEl.value = healthEl.value + 10;
+            console.log(healthEl.value);
+
+            updateHealthColor();
+            percentagetext();
+        }
+
+        function updateHealthColor() {
+
+            healthEl.classList.remove("is-danger", "is-warning", "is-success");
+            if (healthEl.value <= 30) {
+
+                healthEl.classList.add("is-danger");
+            } else if (healthEl.value >= 60) {
+
+                healthEl.classList.add("is-success");
+            } else {
+                healthEl.classList.add("is-warning");
+            }
+        }
+
+        function percentagetext() {
+            percentage.textContent = healthEl.value;
+        }
+
+    </script>
+</body>
+
+</html>

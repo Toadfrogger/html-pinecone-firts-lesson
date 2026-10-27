@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            height:300px;
+            width:200px;
+            background-color:violet;
+            border-radius:20px;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+
+        .card-open {
+            transform: rotateY(180deg);
+
+        }
+        .container {
+            display:flex;
+            flex-wrap: wrap;
+            gap:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container"></div>
+
+    <script>
+        const cards = [0, 3, 2, 1, 2, 3, 0,1];
+
+        function startGame() {
+            let result = "";
+            for (let i = 0; i<cards.length; i++) {
+                result += `<div class="card" id="card${i}" onclick="reveal(${i})">${cards[i]}</div>`
+            }
+            document.getElementById("container").innerHTML = result;
+
+        }
+
+        
+
+
+        startGame();
+
+
+
+        function reveal(index) {
+            document.getElementById(`card${index}`).classList.add("card-open");
+
+        }
+    </script>
+</body>
+</html>

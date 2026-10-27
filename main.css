@@ -1,0 +1,194 @@
+header {
+position: sticky;
+top: 0;
+
+
+}
+
+.header-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1200px;
+    height: 80px;
+
+    box-shadow: 0px 10px 20px rgba(221, 183, 255, 0.2);
+
+    margin-bottom: 97px;
+    margin:0 auto;
+   
+
+}
+
+.logo img{
+    width: 150px;
+}
+
+
+
+.action{
+    background-color:rgb(221, 183, 255);
+    height: 39px;
+    width: 120px;
+    text-align: center;
+    border-radius:999px;
+}
+
+.action:hover{
+    background-color:rgb(152, 110, 189);
+}
+
+ul {
+   display: flex;
+   gap: 20px;
+   text-align: center;
+   list-style-type: none;
+}
+
+
+.menu a:hover{
+color:rgb(221, 183, 255);
+padding-bottom: 8px;
+border-bottom: 4px solid rgb(221, 183, 255);
+}
+
+/*Header ends*/
+
+.container-jam{
+
+}
+
+.jam {
+    display: flex;
+    width: 1120px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jam-title {
+    font-size: 70px; 
+    font-weight: 40px; 
+    background: linear-gradient(#7b59d0, #ce54a3);
+    background-clip: text;
+    color: transparent;
+    
+
+}
+
+
+
+
+.jam-image img{
+    width: 580px;
+    height: 600px;
+    border-radius: 48px;
+    box-shadow: 9px 10px 50px rgba(59, 59, 110, 0.5);
+    
+   
+}
+
+.jam-icon {
+    position:absolute;
+    top:24px;
+    right: 24px;
+    color:#ce54a3;
+    border: 2px #ce54a3;
+    border-radius: 30px;
+    font-size: small;
+    width: 90px;
+    height: 50px;
+}
+
+
+.jam-text {
+    padding-top: 10px;
+    height: 300px;
+}
+
+.jam-meta {
+    display: flex;
+    
+    gap: 20px;
+}
+
+
+.jam-date {
+    background-image: url("https://www.google.com/imgres?q=date%20icon&imgurl=https%3A%2F%2Fp1.hiclipart.com%2Fpreview%2F779%2F107%2F742%2Fdate-icon-calendar-symbol-calendar-date-logo-icon-design-month-blue-png-clipart.jpg&imgrefurl=https%3A%2F%2Fwww.hiclipart.com%2Ffree-transparent-background-png-clipart-phdbn&docid=8sCDwyjX9GWssM&tbnid=YhRY7cSOZEybOM&vet=12ahUKEwiD0azS-bqWAxXIkOEIHT_YIE0QnPAOegQITRAA..i&w=540&h=540&hcb=2&ved=2ahUKEwiD0azS-bqWAxXIkOEIHT_YIE0QnPAOegQITRAA");
+    background-repeat: no-repeat;
+    padding-left: 8px;
+}
+.jam-location {
+    background-image: url("https://www.google.com/imgres?q=location%20icon&imgurl=https%3A%2F%2Fwww.citypng.com%2Fpublic%2Fuploads%2Fpreview%2Fgps-location-white-symbol-icon-transparent-png-701751695035107fkjofebutf.png&imgrefurl=https%3A%2F%2Fwww.citypng.com%2Fphoto%2F19284%2Fgps-location-white-symbol-icon-transparent-png&docid=Pcoe5dBOWqioyM&tbnid=FIG_tO82VCoRKM&vet=12ahUKEwjlzZHYjL2WAxURj-EIHfpUB1oQnPAOegUI2AUQAA..i&w=800&h=800&hcb=2&ved=2ahUKEwjlzZHYjL2WAxURj-EIHfpUB1oQnPAOegUI2AUQAA");
+   background-repeat: no-repeat;
+    padding-left: 8px;
+}
+
+.jam-action{ 
+    background-color:rgb(165, 183, 238);
+    text-align: center;
+    color: rgb(53, 53, 135);
+    height: 68px;
+    width: 200px;
+    border-radius: 999px;
+    font-size: 20px;
+    
+}
+
+.lineup {
+    margin: 0 auto;
+    width: 1200px;
+    height: 684px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.lineup-artists {
+    width: 1200px;
+    height: 374px;
+    display:flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 10px;
+
+}
+
+.lineup-image img{
+    width:374px;
+    height: 374px;
+    border-radius: 30px;
+    box-shadow: 0 10px 10px rgba(165, 114, 210, 0.2);
+    background-image: linear-gradient(0deg, rgba(0,0,0, 0.2), rgba(242, 79, 253, 0.778));
+
+}
+
+
+
+
+
+
+.info {
+width: 1125;
+height:120px;
+display: flex;
+gap: 100 px;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.info-box {
+    width: 365px;
+    height: 100px;
+    background-color: rgb(74, 68, 89);
+    border-radius: 40px ;
+    text-align: center;
+
+}
+
+
+
